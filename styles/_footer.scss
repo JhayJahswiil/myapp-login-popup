@@ -1,0 +1,19 @@
+@import 'reset';
+@import 'colors';
+@import 'variables';
+@import 'mixins';
+// @import 'pop-up';
+
+// FOOTER
+footer{
+    background-color: $light-blue;
+    height: 5vh;
+
+    & p{
+        text-align: center;
+        font-weight: bold;
+        padding: 5px;
+        font-size: 15px;
+        color: $white-color;
+    }
+}

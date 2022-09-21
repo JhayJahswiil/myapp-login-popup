@@ -1,0 +1,7 @@
+// MEDIA QUERIES
+
+@mixin media-query($px) {
+    @media screen and (max-width: $px) {
+        @content;
+    }
+}

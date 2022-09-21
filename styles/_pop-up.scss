@@ -1,0 +1,210 @@
+@import 'reset';
+@import 'colors';
+@import 'variables';
+@import 'mixins';
+@import 'media-queries';
+@import 'footer';
+
+// POP UP
+.pop__up{
+    background-color: $white-color;
+    width: 650px;
+    @include display;
+    flex-direction: column;
+    border-radius: 10px;
+    position: relative;
+    display: none;
+
+    &--img{
+        display: flex;
+        justify-content: center;
+        margin-top: -1.2em;
+
+        & img{
+            width: 160px;
+        }
+    }
+
+    &--content{
+        text-align: center;
+        font-weight: 600;
+        width: 100%;
+        margin-top: -1.5em;
+
+        & .close-popup{
+            position: absolute;
+            top: 25px;
+            left: 30px;
+            font-size: 23px;
+            padding: 10px;
+            transition: .3s ease-in-out;
+
+            &:hover{
+                background-color: $alice-blue;
+                border-radius: 10px;
+
+                & p{
+                    display: block;
+                }
+            }
+
+            & p{
+                font-weight: lighter;
+                font-size: 10px;
+                background-color: $light-blue;
+                padding: 2px 7px;
+                position: absolute;
+                top: 40px;
+                left: 0;
+                color: $white-color;
+                display: none;
+            }
+
+            // POP-UP MEDIA QUERY
+            @include media-query(400px){
+                font-size: 20px;
+                top: 10px;
+                left: 15px;
+            }
+        }
+
+        p{
+            font-size: 23px;
+        }
+
+        // SIGN UP WITH APPLE AND GOOGLE BUTTONS
+        & .apple, .google{
+            margin: 20px auto;
+            display: block;
+            text-align: center;
+            width: 60%;
+            border-radius: 20px;
+            padding: 10px;
+            border: 0.01mm solid $light-black;
+            background-color: transparent;
+
+            &:hover{
+                background-color: $alice-blue;
+                cursor: pointer;
+            }
+
+            // SIGN UP WITH APPLE AND GOOGLE MEDIA QUERY
+            @include media-query(700px){
+                width: 75%;
+            }
+        }
+
+        // OR HORIZONTAL LINE
+        & hr{
+            overflow: visible;
+            margin: 30px auto;
+            border-style: solid;
+            border-color: $light-black;
+            border-width: 1px 0 0 0;
+            width: 60%;
+
+            &:after{
+                content: "or";
+                display: inline-block;
+                position: relative;
+                top: -0.7em;
+                font-size: 20px;
+                padding: 0 0.25em;
+                background: white;
+            }
+        }
+
+        // FORM
+        &__form{
+            margin: -5.6% auto;
+            width: 60%;
+
+            & .inputs{
+                position: relative;
+
+                & input{
+                    display: block;
+                    width: 100%;
+                    border-radius: 10px;
+                    border: 0.1mm solid $light-black;
+                    padding: 18px;
+                    margin-top: 10px;
+                    outline: none;
+                    font-size: 15px;
+
+                    @include media-query(400px){
+                        padding-top: 22px;
+                    }
+                }
+                
+                & label{
+                    font-size: 12px;
+                    color: $light-black;
+                    padding: 5px 0 0 10px;
+                    position: absolute;
+                    top: 12px;
+                    left: 0;
+                    transition: 0.3s ease all;
+                }
+
+                // FORM LABEL FOCUS TRANSITION
+                input:focus ~ label, input:not(:focus):valid ~ label{
+                    top: 1px;
+                }
+
+                & .open-eye, .close-eye{
+                    position: absolute;
+                    top: 20px;
+                    right: 15px;
+                    font-size: 15px;
+                }
+
+                & .open-eye{
+                    display: none;
+                }
+            }
+
+            // FORM MEDIA QUERY
+            @include media-query(700px){
+                width: 75%;
+            }
+        }
+
+        // BOTTOM BUTTONS
+        &__buttons{
+            margin-top: 4em;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 6%;
+
+            & button{
+                margin: 10px auto;
+                display: block;
+                text-align: center;
+                width: 60%;
+                border-radius: 20px;
+                padding: 10px;
+                border: 0.01mm solid $light-black;
+                background-color: $alice-blue;
+                font-weight: bold;
+
+                &:hover{
+                    background-color: lighten($color: $alice-blue, $amount: 10%);
+                    cursor: pointer;
+                }
+
+                // BUTTONS MEDIA QUERY
+                @include media-query(700px){
+                    width: 75%;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    // POP-UP MEDIA QUERY
+    @include media-query(700px){
+        width: 85%;
+    }
+
+}

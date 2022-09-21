@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.myApp.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- BUTTON -->
+        <button type="button" class="login">LOGIN</button>
+    
+        <!-- POP-UP -->
+        <div class="pop__up">
+            <div class="pop__up--img">
+                <img src="./assets/img/myApp.png" alt="myApp-Logo">
+            </div>
+            
+            <!-- pop-contents -->
+            <div class="pop__up--content">
+                <!-- close icon -->
+                <div class="close-popup">
+                    <i class="fa-solid fa-x"></i>
+                    <p>close</p>
+                </div>
+    
+                <p>Sign in to myApp</p>
+                <button type="button" class="apple">Sign up with Apple</button>
+                <button type="button" class="google">Sign up with Google</button>
+    
+                <!-- HORIZONTAL ROW -->
+                <hr>
+    
+                <div class="pop__up--content__form">
+                    <div class="inputs">
+                        <input type="text" name="text-input" id="text-input" class="text-input" required>
+                        <label for="text-input">Phone, Email, or Username</label>
+                    </div>
+    
+                    <div class="inputs">
+                        <input type="password" name="text-input" id="password-input" class="password-input" required>
+                        <label for="password-input">Password</label>
+    
+                        <!-- visibility icons -->
+                        <i class="fa-solid fa-eye open-eye"></i>
+                        <i class="fa-solid fa-eye-slash close-eye"></i>
+                    </div>
+                </div>
+    
+                <div class="pop__up--content__buttons">
+                    <button type="button" class="submit">SUBMIT</button>
+                    <button type="button" class="forgot">FORGOT PASSWORD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <p>Made with 🤍 by JhayJahswill</p>
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+</html>
